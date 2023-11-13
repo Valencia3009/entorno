@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Registro Universidad</h1>
+    <h2>Tabla Carreras</h2>
+    <TABLE BORDER>
+        <tr>
+            <td>ID</td>
+            <td>ID_Carrera</td> 
+            <td>Nombre_Carrera</td> 
+        </tr>
+        {% for carreras in carreras %}
+        <tr>
+            <td>{{carreras.id}}</td>
+            <td>{{carreras.ID_Carrera}}</td> 
+            <td>{{carreras.Nombre_Carrera}}</td> 
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Tabla Profesores</h2>
+    <TABLE BORDER>
+        <tr>
+            <td>ID</td>
+            <td>ID_Profesor</td> 
+            <td>Nombre</td> 
+            <td>Apellido</td> 
+            <td>Correo</td> 
+        </tr>
+        {% for profesores in profesores %}
+        <tr>
+            <td>{{profesores.id}}</td>
+            <td>{{profesores.ID_Profesor}}</td> 
+            <td>{{profesores.Nombre}}</td> 
+            <td>{{profesores.Apellido}}</td>
+            <td>{{profesores.Correo}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>Tabla Estudiantes</h2>
+    <TABLE BORDER>
+        <tr>
+            <td>ID</td>
+            <td>ID_Estudiantes</td> 
+            <td>Nombre</td> 
+            <td>Apellido</td> 
+            <td>Edad</td> 
+            <td>Carrera_ID</td>
+        </tr>
+        {% for estudiantes in estudiantes %}
+        <tr>
+            <td>{{estudiantes.id}}</td>
+            <td>{{estudiantes.ID_Estudiante}}</td> 
+            <td>{{estudiantes.Nombre}}</td> 
+            <td>{{estudiantes.Apellido}}</td>
+            <td>{{estudiantes.Edad}}</td>
+            <td>{{estudiantes.Carrera_ID}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Tabla Asignaturas</h2>
+    <TABLE BORDER>
+        <tr>
+            <td>ID</td>
+            <td>ID_Asignatura</td> 
+            <td>Nombre_Asignatura</td> 
+            <td>ID_Profesor</td>  
+            <td>Carrera_ID</td>
+        </tr>
+        {% for asignatura in asignatura %}
+        <tr>
+            <td>{{asignatura.id}}</td>
+            <td>{{asignatura.ID_Asignatura}}</td> 
+            <td>{{asignatura.Nombre_Asignatura}}</td> 
+            <td>{{asignatura.ID_Profesor}}</td>
+            <td>{{asignatura.Carrera_ID}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
